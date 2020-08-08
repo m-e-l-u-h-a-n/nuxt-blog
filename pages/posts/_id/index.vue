@@ -1,18 +1,36 @@
 <template>
     <div class="single-post-page">
         <section class="post">
-            <h1 class="post-title">Title of the post</h1>
+            <h1 class="post-title">{{ loadedPost.title }} (ID: {{ loadedPost.id }})</h1>
             <div class="post-details">
-                <div class="post-detail">Last updated on XXXX</div>
-                <div class="post-detail">Written by Name</div>
+                <div class="post-detail">Last updated on: {{ loadedPost.date }}</div>
+                <div class="post-detail">Written by Name: {{ loadedPost.author }}</div>
             </div>
-            <p class="post-content">Content of the post</p>
+            <p class="post-content">{{ loadedPost.content }}</p>
         </section>
         <section class="post-feedback">
             <p>Let me know what you are thinking <a href="mailto:feedback@my-awesome-domain.com">feedback@my-awesome-domain.com</a></p>
         </section>
     </div>
 </template>
+<script>
+export default {
+  asyncData(context,callback){
+    setTimeout(()=>{
+      callback(null,{
+        loadedPost: {
+          id: context.params.id,
+          title: "First Post",
+          previewText: "This is our first post",
+          author: "Purushottam Tiwari",
+          date: new Date(),
+          content: "Some dummy text which is not the preview text though."
+        }
+      })
+    },1000)
+  }
+}
+</script>
 <style scoped>
 .single-post-page {
   padding: 30px;
