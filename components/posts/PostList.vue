@@ -1,8 +1,6 @@
 <template>
     <section class="featured-posts">
-	  <post-preview id="1" title="Hello there" previewText="This is my first post!"/>
-	  <post-preview id="2" title="bello there" previewText="This is my second post!"/>
-	  <post-preview id="3" title="tello there" previewText="This is my third post!"/>
+	  <post-preview v-for="post in posts" :key="post.id" :id="post.id" :title="post.title" :previewText="post.previewText" :is-admin="isAdmin"/>
 	</section>
 </template>
 <script>
@@ -10,7 +8,17 @@ import PostPreview from '@/components/posts/PostPreview';
 export default {
 	components: {
 		PostPreview
-	}
+    },
+    props: {
+        isAdmin: {
+            type: Boolean,
+            default: false
+        },
+        posts: {
+          type: Array,
+          required: false
+        }
+    }
 }
 </script>
 <style scoped>
