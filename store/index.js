@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 const createStore = () => {
     return new Vuex.Store({
         state: {
-            loadedPosts: []
+            loadedPosts: [],
+            token: null
         },
         mutations: {
             setPosts(state, posts) {
@@ -15,6 +16,9 @@ const createStore = () => {
             editPost(state, editedPost) {
                 postIndex = state.loadedPosts.findIndex(post => post.id === editedPost.id);
                 state.loadedPosts[postIndex] = editedPost;
+            },
+            setToken(state, token) {
+                state.token = token;
             }
         },
         getters: {
@@ -50,6 +54,24 @@ const createStore = () => {
                     .then(res => {
                         vuexContext.commit('editPost', editedPost);
                     })
+                    .catch(e => console.log(e))
+            },
+            authenticateUser(vuexContext, authData) {
+                let authUrl = '';
+                if (!authData.isLogin) {
+                    authUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=";
+                } else {
+                    authUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=";
+                }
+                this.$axios
+                    .$post(authUrl + process.env.firebaseApiKey, {
+                        email: authData.email,
+                        password: authData.password,
+                        returnSecureToken: true,
+                    })
+                    .then(result =>
+                        console.log(result)
+                    )
                     .catch(e => console.log(e))
             }
         },

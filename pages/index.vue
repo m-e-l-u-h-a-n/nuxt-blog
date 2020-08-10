@@ -13,6 +13,7 @@ export default {
   // components: {
   //   PostList      We don't need this right now coz we have registered this component in nuxt.config.js file.
   // },
+  middleware: 'log',
   data() {
     return {};
   },

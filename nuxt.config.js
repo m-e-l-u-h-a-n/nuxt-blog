@@ -65,6 +65,7 @@ export default {
     build: {},
     env: {
         baseUrl: process.env.BASE_URL || 'https://nuxt-blog-fcd31.firebaseio.com',
+        firebaseApiKey: "AIzaSyDyTnGRG0SC9jzuE49wi8b0r4_Ug2QWT84",
     },
     router: {
         extendedRoutes(routes, resolve) {
