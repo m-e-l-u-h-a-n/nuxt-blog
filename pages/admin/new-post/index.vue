@@ -6,13 +6,13 @@
   </div>
 </template>
 <script>
-import AdminPostForm from "@/components/admin/AdminPostForm";
+// import AdminPostForm from "@/components/admin/AdminPostForm";
 import axios from "axios";
 export default {
   layout: "admin",
-  components: {
-    AdminPostForm
-  },
+  // components: {
+  //   AdminPostForm
+  // },
   methods: {
     onSubmitted(postData) {
       this.$store.dispatch('addPost',postData).then(() => {this.$router.push('/admin');})

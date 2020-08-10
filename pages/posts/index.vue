@@ -4,11 +4,11 @@
   </div>
 </template>
 <script>
-import PostList from "@/components/posts/PostList";
+//import PostList from "@/components/posts/PostList";
 export default {
-  components: {
-    PostList
-  },
+  // components: {
+  //   PostList
+  // },
   computed: {
 	  loadedPosts() {
 		return this.$store.getters.loadedPosts;

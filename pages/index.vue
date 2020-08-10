@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import PostList from "@/components/posts/PostList";
+// import PostList from "@/components/posts/PostList";
 export default {
-  components: {
-    PostList
-  },
+  // components: {
+  //   PostList      We don't need this right now coz we have registered this component in nuxt.config.js file.
+  // },
   data() {
     return {};
   },

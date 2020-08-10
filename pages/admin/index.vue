@@ -10,14 +10,14 @@
     </div>
 </template>
 <script>
-import PostList from '@/components/posts/PostList';
-import AppButton from '@/components/ui/AppButton';
+// import PostList from '@/components/posts/PostList';
+// import AppButton from '@/components/ui/AppButton';
 export default {
     layout: 'admin',
-    components: {
-        PostList,
-        AppButton
-    },
+    // components: {
+    //     PostList,
+    //     AppButton
+    // },
     computed: {
       loadedPosts(){
         return this.$store.getters.loadedPosts;
