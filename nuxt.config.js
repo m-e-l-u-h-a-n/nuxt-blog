@@ -28,12 +28,17 @@ export default {
     /*
      ** Global CSS
      */
-    css: [],
+    css: [
+        '~assets/styles/main.css'
+    ],
     /*
      ** Plugins to load before mounting the App
      ** https://nuxtjs.org/guide/plugins
      */
-    plugins: [],
+    plugins: [
+        '~plugins/core-components.js',
+        '~plugins/date-filter.js'
+    ],
     /*
      ** Auto import components
      ** See https://nuxtjs.org/api/configuration-components
@@ -46,7 +51,13 @@ export default {
     /*
      ** Nuxt.js modules
      */
-    modules: [],
+    modules: [
+        '@nuxtjs/axios',
+    ],
+    axios: {
+        baseURL: process.env.BASE_URL || 'https://nuxt-blog-fcd31.firebaseio.com',
+        credentials: false
+    },
     /*
      ** Build configuration
      ** See https://nuxtjs.org/api/configuration-build/
@@ -54,5 +65,18 @@ export default {
     build: {},
     env: {
         baseUrl: process.env.BASE_URL || 'https://nuxt-blog-fcd31.firebaseio.com',
+    },
+    router: {
+        extendedRoutes(routes, resolve) {
+            routes.push({
+                path: '*',
+                component: resolve(__dirname, 'pages/index.vue') // This way we can always get to home page if we reach to unknown routes not defined via folder structure.
+            });
+        }
+    },
+    // srcDir: '/my-app', this can be used if we want nuxt to look for default folders like(pages, layout,...) into my-app folder.
+    transition: {
+        name: 'fade',
+        mode: 'out-in',
     }
 }
