@@ -22,7 +22,8 @@ export default {
       loadedPosts(){
         return this.$store.getters.loadedPosts;
       }
-    }
+    },
+    middleware: ['check-auth','auth'],
 }
 </script>
 <style scoped>

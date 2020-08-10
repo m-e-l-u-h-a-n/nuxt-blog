@@ -39,7 +39,7 @@ export default {
         isLogin:this.isLogin,
         email: this.email,
         password: this.password
-      }).then(() => {this.$router.push('/about');})
+      }).then(() => {this.$router.push('/admin');})
     }
   }
 }

@@ -33,7 +33,8 @@ export default {
         this.$router.push("/admin");
       });
     }
-  }
+  },
+  middleware: ['check-auth','auth'],
 };
 </script>
 <style scoped>
