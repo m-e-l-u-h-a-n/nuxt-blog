@@ -13,7 +13,7 @@ export default {
 //   components: {
 //     AdminPostForm
 //   },
-  asyncData(context) {
+  asyncData(context) { // only available in page components and not available in layout or componentsfolder vue files.
     return axios
       .get(
         "https://nuxt-blog-fcd31.firebaseio.com/posts/" +
