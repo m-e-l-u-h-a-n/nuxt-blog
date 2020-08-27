@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/admin/new-post", (function(a){return {data:[],fetch:[],mutations:[["clearToken",a],["setToken",a]]}}(void 0)));

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/posts/-MEMGmd4jEbiyG05tQqm", (function(a){return {data:[{loadedPost:{author:a,content:"fdsa",date:"2020-08-10T07:30:30.706Z",previewText:"dfsdvamdcbk",thumbnail:a,title:a}}],fetch:[],mutations:[]}}("fdas")));

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/posts/-MEHTKrdOROmMYiTBINE", {data:[{loadedPost:{author:"Purushottam Tiwari",content:"Again Changed content",id:"-MEHTKrdOROmMYiTBINE",previewText:"Again changed preview text",thumbnail:"Again Changed link",title:"Again Changed title"}}],fetch:[],mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/posts/-MEHU05w7dNqUUThl4hY", {data:[{loadedPost:{author:"Purushottam Tiwari",content:"I am proud of you.",id:"-MEHU05w7dNqUUThl4hY",previewText:"the inner voice of andra.",thumbnail:"andhra pradesh",title:"Hyderabad"}}],fetch:[],mutations:[]});

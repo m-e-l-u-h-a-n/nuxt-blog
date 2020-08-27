@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/posts/-MEHCJMq0OQDv-j-X9uc", {data:[{loadedPost:{author:",vmldvn",content:"jslcnskd kl lkjdoifadklmkshjfai akpofaihfjoa jfosfopajfk lkjosfdokjafakhd",id:"-MEHCJMq0OQDv-j-X9uc",previewText:"kgdjhdjajofiaeoj nkofjaeioehj",thumbnail:"lfmbkmar",title:"vknkg"}}],fetch:[],mutations:[]});

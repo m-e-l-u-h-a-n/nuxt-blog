@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/posts/-MELt87NyChXk9ZtFFgh", {data:[{loadedPost:{author:"purushottam tiwari",content:"content is not available so i am putting some dummy content.",date:"2020-08-10T05:42:49.250Z",previewText:"preview text is purely dummy here.",thumbnail:"thumb nail link not available",title:"trial for modules of nuxt"}}],fetch:[],mutations:[]});
